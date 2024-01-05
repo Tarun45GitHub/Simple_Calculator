@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: digital7;
+    
+}
+@font-face {
+    font-family: digital7;
+    src: url(digital-7.ttf);
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    height: 65vh;
+    width: 28vw;
+    border: 2px solid black;
+}
+button{
+   height: 13vh;
+   width: 7vw;
+   font-size: 2rem;
+   transition: all;
+}
+button:hover{
+    font-size: 3rem;
+    
+}
+.num{
+    background-color: rgb(23, 21, 21);
+    color:white;
+}
+.opr{
+    background-color: rgb(248, 248, 143);
+}
+.clear{
+    background-color: rgb(245, 103, 103);
+}
+.slove{
+    background-color: rgb(127, 241, 127);
+}
+.ans{
+  background-color: aquamarine;
+  border: 3px solid violet;
+  height: 13vh;
+  width: 26vw;
+  margin: 5px;
+  padding: 5px;
+  font-size: 3rem;
+}

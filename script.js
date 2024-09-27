@@ -30,7 +30,7 @@ slovebutton.forEach(button=>{
 })
 clearbutton.forEach(button=>{
     button.addEventListener('click',()=>{
-        clearN();
+        clearN(button.value);
         updateDisplay();
     })
 })
@@ -52,10 +52,22 @@ function updateDisplay(){
         operation.innerText='';
     }
 }
-function clearN(){
-   fstring='';
-   mstring='';
-   lstring='';
+function clearN(str){
+console.log();
+    
+    if(str=="DE"){
+        if(mstring!=""){
+          if(lstring!="") lstring= lstring.slice(0,-1);
+          else mstring="";
+        }
+        else fstring=fstring.slice(0,-1); 
+    }
+    else if(str=="AC"){
+        lstring="";
+        mstring="";
+        fstring="";
+    }
+  
 }
 function selectOperation(operation){
     if(fstring!="") mstring=operation;
@@ -65,16 +77,16 @@ function calculate(){
     let ans;
    switch (mstring) {
     case '+':
-        ans=parseInt(fstring)+parseInt(lstring);
+        ans=parseFloat(fstring)+parseFloat(lstring);
         break;
    case '-':
-    ans=parseInt(fstring)-parseInt(lstring);
+    ans=parseFloat(fstring)-parseFloat(lstring);
     break;
     case '*':
-        ans=parseInt(fstring)*parseInt(lstring);
+        ans=parseFloat(fstring)*parseFloat(lstring);
     break;
     case '/':
-        ans=parseInt(fstring)/parseInt(lstring);
+        ans=parseFloat(fstring)/parseFloat(lstring);
     break;
     default:
         return;
